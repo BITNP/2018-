@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>北京理工大学数字迎新</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<style>
+		div {
+			overflow: hidden;
+			background: rgba(255,255,255,0) !important;
+		}
+		body {
+			background: url("img/bg.jpg");
+			background-size: 100vw 100vh;
+		}
+		* {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+	  <div class="row">
+	  	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	  		<h1 class="text-center ">2018级新生报到大数据</h1>
+	  	</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+	  		<div class="row">
+	  			<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+	  				<div class="row">
+	  					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	  						<h3 class="text-center">本科生报到情况统计</h3>
+	  						<div class="card">
+	  							<div class="card-body">
+	  								<div id="register_num_chart" style="width:100%;height: 20vh;"></div>
+	  							</div>
+	  						</div>
+	  					</div>
+<!-- 	  					<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+	  						<h3 class="text-center">最新报到同学</h3>
+	  						<div id="register_people_chart" style="width:20vw;height: 20vh;"></div>
+	  					</div> -->
+	  				</div>
+	  				<div class="row">
+	  					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	  						<h3 class="text-center">报到时间统计</h3>
+	  						<div class="card">
+	  							<div class="card-body">
+	  								<div id="register_time_chart" style="widows: 100%;height: 20vh;"></div>
+	  							</div>
+	  						</div>	  						
+	  					</div>
+<!-- 	  					<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+	  						<h3 class="text-center">实时之最显示</h3>
+	  						<div id="register_max_chart" style="width:20vw;height: 20vh;"></div>
+	  					</div> -->
+	  				</div>
+	  			</div>
+<!-- 	  			<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	  				<div class="row">
+	  					<div class="div col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+	  					<div class="div col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+	  				</div>
+	  				<div class="row">
+	  					<div class="div col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+	  					<div class="div col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></div>
+	  				</div>
+	  			</div> -->
+	  			<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+	  				<h3 class="text-center">本科生招生及报到情况统计</h3>
+					<div class="card">
+						<div class="card-body">
+							<div id="ditu_chart" style="width:100%;height: 50vh;"></div>
+						</div>
+					</div>
+	  			</div>
+	  		</div>
+  			<div class="row">
+  				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+					<table class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th scope="col">最新报到</th>
+					      <th scope="col">姓名</th>
+					      <th scope="col">报到时间</th>
+					      <th scope="col">省份</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Mark</td>
+					      <td>20180808</td>
+					      <td>河南</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Mark</td>
+					      <td>20180808</td>
+					      <td>河南</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Mark</td>
+					      <td>20180808</td>
+					      <td>河南</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">4</th>
+					      <td>Mark</td>
+					      <td>20180808</td>
+					      <td>河南</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">5</th>
+					      <td>Mark</td>
+					      <td>20180808</td>
+					      <td>河南</td>
+					    </tr>
+					  </tbody>
+					</table>
+  				</div>
+  				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+					<table class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th scope="col">报到率排行</th>
+					      <th scope="col">省份</th>
+					      <th scope="col">报到率</th>
+					      <th scope="col">报到人数/应报人数</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>河南</td>
+					      <td>57%</td>
+					      <td>114/200</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>河北</td>
+					      <td>50%</td>
+					      <td>73/146</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>湖北</td>
+					      <td>30%</td>
+					      <td>30/100</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">4</th>
+					      <td>浙江</td>
+					      <td>25%</td>
+					      <td>100/400</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">5</th>
+					      <td>广东</td>
+					      <td>24%</td>
+					      <td>48/200</td>
+					    </tr>
+					  </tbody>
+					</table>
+  				</div>
+<!--   				<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	  				<h3 class="text-center">报到流程统计</h3>
+				</div>
+  				<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	  				<h3 class="text-center">招生数量前十名书院</h3>
+				</div>
+  				<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	  				<h3 class="text-center">书院少数民族比例前十</h3>
+				</div>
+  				<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+	  				<h3 class="text-center">报到效率前十书院</h3>
+				</div> -->
+  			</div>
+	  	</div>
+	  	<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+	  		<h3 class="text-center">各书院报到统计</h3>
+			<div class="card">
+				<div class="card-body">
+	  				<div id="school_chart" style="width:20vw;height: 80vh;"></div>
+				</div>
+			</div>
+	  	</div>
+	  </div>
+	</div>
+
+
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+	
+	<!-- 加载中国地图 -->
+	<script type="text/javascript" src="js/china.js"></script>
+
+	<!-- echarts::注册人数，本科生报到情况统计 -->
+	<script src="js/register_num.js"></script>
+
+	<!-- echarts::注册时间，报到时间统计 -->
+	<script src="js/register_time.js"></script>
+
+	<!-- echarts::书院，各书院报到统计 -->
+	<script src="js/school.js"></script>
+	
+	<!-- echarts::地图 -->
+	<script src="js/ditu.js"></script>
+
+</body>
+</html>
