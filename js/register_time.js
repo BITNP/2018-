@@ -1,92 +1,117 @@
-// 我希望后台发送类似这样的数据，我会在前台做转化
-var register_time_data_from_end = {
-    time: "1534243104", // 时间戳
-    completed: 152, // 已报到完成数
-    processing: 22, // 正在报到数
-    undo: 3452 // 尚未报到数
-}
-
-var completed_data = [320, 302, 301, 320, 302, 301, 320];
-var processing_data = [120, 132, 101,320, 302, 301, 320];
-var undo_data = [220, 182, 191,320, 302, 301, 320];
-
-
 
 let register_time_option = {
-    backgroundColor:'',
-    title: {
-        text: ''
-    },
-    tooltip : {
+    tooltip: {
+        show:false,
         trigger: 'axis',
         axisPointer: {
             type: 'cross',
-            label: {
-                backgroundColor: '#ffffff'
+            crossStyle: {
+                color: '#999'
             }
         }
     },
-    legend: {
-        data:['报到完成人数','正在报到人数','未报到人数'],
+    title:{
+        text: '报名时间分布',
+        x: 'center',
         textStyle: {
-            color: "white"
+            color: 'white',
+            fontSize: '25'
         }
     },
     toolbox: {
         feature: {
-            saveAsImage: {}
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+            saveAsImage: {show: true}
         }
     },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis : [
+    xAxis: [
         {
-            type : 'category',
-            boundaryGap : false,
-            data : ['7:00','8:00','9:00','10:00','11:00','12:00','13:00']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value'
-        }
-    ],
-    series : [
-        {
-            name:'报到完成人数',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data: completed_data
-        },
-        {
-            name:'正在报到人数',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data: processing_data
-        },
-        {
-            name:'未报到人数',
-            type:'line',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'top'
+            type: 'category',
+            data: ['9:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'],
+            axisPointer: {
+                type: 'shadow'
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'white',
+                    width: 1
                 }
             },
-            areaStyle: {normal: {}},
-            data: undo_data
+            axisLabel: {
+                show: true,
+                interval: 0,
+                color: 'white',
+                rotate: 45,
+                fontSize: '15',
+                fontWeight: 'bold'
+            }
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '',
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    opacity: 0
+                }
+            },
+            axisTick: true,
+            min: 0,
+            max: 2500,
+            interval: 500,
+            axisLabel: {
+                show: true,
+                formatter: '{value}',
+                color: 'white',
+                fontSize: '15',
+                fontWeight: 'bold'
+            },
+            splitLine: {
+                // show: false,
+                lineStyle: {
+                    color: 'white',
+                    width: 1
+                }
+            }
+        }
+    ],
+    series: [
+        {
+            name:'当前报名人数柱状图',
+            type:'bar',
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(255,192,0,1)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(255,192,0,0)'
+                    }]),
+                borderWidth: 1,
+                borderColor: '#fff'
+            },
+            data:[50, 100, 390, 430, 460, 600, 900, 1100, 1600, 2000]
+        },
+        {
+            name:'当前报名人数折线图',
+            type:'line',
+            itemStyle: {
+                color: '#fff'
+            },
+            lineStyle:{
+                color: 'white',
+                width: 1
+            },
+            data:[50, 100, 390, 430, 460, 600, 900, 1100, 1600, 2000]
         }
     ]
 };
 
-var register_time_charts = echarts.init(document.getElementById('register_time_chart'));
 
-register_time_charts.setOption(register_time_option);
+var register_time_charts = echarts.init(document.getElementById('register_time_chart'));
+register_time_charts.setOption(register_time_option)
 

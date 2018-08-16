@@ -1,56 +1,68 @@
-// 我希望后台发送类似这样的数据，我会在前台做转化
-var register_num_data_from_end = {
-    completed: 335, // 已报到完成数
-    processing: 20, // 正在报到数
-    undo: 234 // 尚未报到数
-}
-
-
-var register_num_data = [
-                {value:335, name:'报到完成人数'},
-                {value:20, name:'正在报到人数'},
-                {value:234, name:'未报到人数'}
-            ];
 
 register_num_option = {
     tooltip: {
+        show: false,
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
+    title:{
+      text:'总招新人数: 3568',
+      x: 'center',
+      textStyle: {
+          color: 'white'
+      }
+    },
     legend: {
-        data:['报到完成人数','正在报到人数','未报到人数'],
-        textStyle: {
-            color: "white"
-        }
+        show: false,
+        orient: 'vertical',
+        x: 'left',
+        data:['已报到人数','未报到人数']
     },
     series: [
         {
             name:'访问来源',
             type:'pie',
-            radius: ['50%', '70%'],
+            radius: ['45%', '60%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
-                    show: false,
-                    position: 'center'
+                    show: true,
+                    textStyle: {
+                        // fontSize: '30'
+                    }
                 },
                 emphasis: {
                     show: true,
                     textStyle: {
-                        fontSize: '30',
+                        // fontSize: '50',
                         fontWeight: 'bold'
                     }
                 }
+            },
+            itemStyle: {
+              normal: {
+                  label: {
+                      show: true,
+                      formatter: '{b}\n{c}',
+                      color: '#fff',
+                      fontWeight: 'bold'
+                  }
+              }
             },
             labelLine: {
                 normal: {
                     show: false
                 }
             },
-            data:register_num_data
+            data:[
+                {value:1500, name:'已报到人数'},
+                {value:500, name:'未报到人数', selected: true}
+            ]
         }
-    ]
+    ],
+    color: ['rgb(255,192,0)','rgb(166,166,166)']
 };
+
 
 var register_num_charts = echarts.init(document.getElementById('register_num_chart'));
 register_num_charts.setOption(register_num_option)
