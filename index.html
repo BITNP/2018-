@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>北京理工大学数字迎新</title>
@@ -10,23 +11,28 @@
 			margin: 0;
 			padding: 0;
 		}
+
 		div {
 			overflow: hidden;
-			background: rgba(255,255,255,0) !important;
+			background: rgba(168, 66, 66, 0) !important;
 		}
+
 		body {
 			width: 100vw;
 			height: 100vh;
 			overflow: hidden;
-			background: url("img/bg.png") no-repeat;
+			background: url("img/bg-test.png") no-repeat;
 			background-size: 100vw 100vh;
 		}
+
 		.position-absolute {
 			position: absolute;
 		}
+
 		.p-3 {
 			padding: 3vw;
 		}
+
 		.left-people {
 			/*position: absolute;*/
 			/*float: right;*/
@@ -36,28 +42,34 @@
 			width: 8vw;
 			height: 12vh;
 		}
+
 		.left-people.boy {
 			/*background: url('img/boy0.png') no-repeat scroll 0 -20px transparent;*/
 		}
+
 		.left-bg {
-			background: url("img/left-bg.png") !important;
+			background: url("img/left-bg2.png") !important;
 		}
+
 		.img.img-bg {
 			position: absolute;
-			background: url("img/bg2.png") !important;
+			/* background: url("img/bg2.png") !important; */
 			background-size: 100vw 100vh !important;
 			width: 100vw;
 			height: 100vh;
 		}
+
 		.img.img-xiaohui {
 			width: 18vw;
 			height: 3.5vw;
 		}
+
 		.img.img-people {
 			position: absolute;
 			width: 8vw;
 			height: 12vh;
 		}
+
 		.people-container.boy {
 			position: absolute;
 			height: 100%;
@@ -65,40 +77,42 @@
 			top: 3vw;
 			overflow: hidden;
 		}
+
 		.img.img-people.boy {
 			top: -3vw;
 		}
-		.img.img-people.girl {
-			
-		}
+
+		.img.img-people.girl {}
+
 		.img.img-shuyuan {
 			position: absolute;
 			width: 100%;
 			height: 100%;
 		}
+
 		.left-card {
 			/*border: 1px solid #ccc;*/
 			margin: 20px 20px;
 		}
+
 		.school-wrap {
 			width: 30vw;
 			height: 25vw;
 		}
 	</style>
 </head>
+
 <body>
 	<div class="img img-bg"></div>
 	<div class="container-fluid p-3 position-absolute">
 		<div class="row">
 			<!-- START::LEFT -->
-			<div class="col-4">
+			<div class="col-3">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-12" style="height:10vh;">
 						<img src="img/xiaohui.png" class="img img-xiaohui" alt="xiaohui">
 					</div>
-					<div class="col-4">
-						<h1>2018</h1>
-					</div>
+
 				</div>
 				<div class="row left-card left-bg">
 					<div class="col-8">
@@ -120,7 +134,7 @@
 					</div>
 				</div>
 				<div class="row left-card left-bg">
-					<div id="register_time_chart" style="width: 100%;height: 25vh;"></div>
+					<div id="register_time_chart" style="width: 100%;height: 30vh;"></div>
 				</div>
 				<div class="row left-card left-bg">
 					<div id="ethnic_chart" style="width: 100%;height: 25vh;"></div>
@@ -128,27 +142,30 @@
 			</div>
 			<!-- END::LEFT -->
 			<!-- START::RIGHT -->
-			<div class="col-8">
+			<div class="col-9">
 				<div class="row">
-					<div class="col-12">
-						<h1 style="float: left;">新生报到大<br>数据</h1>
+					<div class="col-8">
+						<h1 style="float: left;">新生报到大数据</h1>
+					</div>
+					<div class="col-4">
+						<h1>2018</h1>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-6">
-						<div id="ditu_chart" style="width:100%;height: 50vh;"></div>
+					<div class="col-8">
+						<div id="ditu_chart" style="width:100%;height: 60vh;"></div>
 					</div>
-					<div class="col-6">
-						<div class="school-wrap">							
-							<img src="img/kuang.png" class="img img-shuyuan" alt="">
+					<div class="col-4">
+						<div class="school-wrap">
+							<!-- <img src="img/kuang.png" class="img img-shuyuan" alt=""> -->
 							<div id="school_chart" style="width:100%;height: 50vh;"></div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 left-bg left-card" style="height:30vh;width:30px;margin: 0;">
 						<h3>最新报到同学</h3>
-						<table class="table">
+						<table class="">
 							<thead>
 								<tr>
 									<th>姓名</th>
@@ -185,7 +202,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="col-6">
+					<div class="col-6 left-bg right-card">
 						<h3>省份报到率排行榜</h3>
 						<table class="table">
 							<thead>
@@ -226,7 +243,7 @@
 
 
 
-<!-- 	  <div class="row">
+		<!-- 	  <div class="row">
 	  	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 	  		<h1 class="text-center ">2018级新生报到大数据</h1>
 	  	</div>
@@ -379,7 +396,7 @@
 
 	<!-- echarts::书院，各书院报到统计 -->
 	<script src="js/school.js"></script>
-	
+
 	<!-- echarts::地图 -->
 	<!-- <script src="js/ditu.js"></script> -->
 
@@ -387,4 +404,5 @@
 	<script src="js/ditu_pm25.js"></script>
 
 </body>
+
 </html>

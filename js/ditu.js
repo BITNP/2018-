@@ -73,7 +73,7 @@ var ditu_option = {
         min: 0,
         max: 15000,
         calculable : true,//颜色呈条状
-        color: ['#E0022B', '#E09107', '#A3E00B']
+        color: ['#A0022B', '#E09107', '#A3E00B']
     },
     toolbox: {
         show: true,
@@ -114,16 +114,28 @@ var ditu_option = {
             itemStyle: {
                 normal: {
                     shadowBlur: 10,
-                    shadowColor: 'rgba(120, 36, 50, 0.5)',
+                    areaColor:'black',
+                    shadowColor: 'rgba(80, 36, 50, 0.5)',
                     shadowOffsetY: 5,
                     color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
                         offset: 0,
-                        color: 'rgb(251, 118, 123)'
+                        color: 'rgb(20, 118, 123)'
                     }, {
                         offset: 1,
-                        color: 'rgb(204, 46, 72)'
+                        color: 'rgb(100, 46, 72)'
                     }])
-                }
+                },
+                emphasis: {// 也是选中样式
+                    borderWidth:2,
+                    borderColor:'#fff',
+                    areaColor: 'red',
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                 }    
             }
         },
         {
