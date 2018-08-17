@@ -15,6 +15,7 @@ var school_option = {
         }
     },
     legend: {
+        show: false,
         x: 'center',
         y: 'bottom',
         data: ['已报到男生','已报到女生','未报到人数'],
