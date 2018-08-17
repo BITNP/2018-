@@ -1,6 +1,13 @@
 var this_barWidth = 30;
 
 var school_option = {
+    title:{
+        text:'各学（书）院报名情况',
+        x: 'center',
+        textStyle: {
+            color: 'white'
+        }
+    },
     tooltip : {
         trigger: 'axis',
         axisPointer : {
@@ -8,10 +15,15 @@ var school_option = {
         }
     },
     legend: {
+        x: 'center',
+        y: 'bottom',
         data: ['已报到男生','已报到女生','未报到人数'],
         textStyle: {
-            color: "white"
-        }
+            color: "white",
+            fontWeight: 'bold'
+        },
+        itemWidth: 20,
+        itemHeight: 20
     },
     grid: {
         left: '3%',
@@ -28,6 +40,11 @@ var school_option = {
         type: 'value',
         nameTextStyle: {
             color: "white"
+        },
+        axisLabel: {
+            show: true,
+            color: 'white',
+            fontWeight: 'bold'
         }
     },
     yAxis: {
@@ -35,6 +52,11 @@ var school_option = {
         data: ['学院01','学院02','学院03','学院04','学院05','学院06','学院07'],
         nameTextStyle: {
             color: "white"
+        },
+        axisLabel: {
+            show: true,
+            color: 'white',
+            fontWeight: 'bold'
         }
     },
     series: [
@@ -42,7 +64,7 @@ var school_option = {
             name: '已报到男生',
             type: 'bar',
             stack: '总量',
-            barWidth:this_barWidth,
+            // barWidth:this_barWidth,
             label: {
                 normal: {
                     show: true,
@@ -55,7 +77,7 @@ var school_option = {
             name: '已报到女生',
             type: 'bar',
             stack: '总量',
-            barWidth:this_barWidth,
+            // barWidth:this_barWidth,
             label: {
                 normal: {
                     show: true,
@@ -68,7 +90,7 @@ var school_option = {
             name: '未报到人数',
             type: 'bar',
             stack: '总量',
-            barWidth:this_barWidth,
+            // barWidth:this_barWidth,
             label: {
                 normal: {
                     show: true,
@@ -77,7 +99,8 @@ var school_option = {
             },
             data: [220, 182, 191,320, 302, 301, 320]
         }
-    ]
+    ],
+    color: ['rgb(0,230,104)', 'rgb(255,192,0)', 'rgb(166,166,166)']
 };
 
 var school_charts = echarts.init(document.getElementById('school_chart'));
