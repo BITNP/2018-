@@ -1,0 +1,151 @@
+/*START::全局*/
+	* {
+		color: white;
+		margin: 0;
+		padding: 0;
+	}
+	div {
+		/*overflow: hidden;*/
+		background: rgba(255,255,255,0);
+	}
+	body {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background: url("../img/bg.png") no-repeat;
+		background-size: 100vw 100vh;
+	}
+/*END::全局*/
+
+
+.h2018 {
+	float: right;
+}
+.position-absolute {
+	position: absolute;
+}
+.p-3 {
+	padding: 3vw;
+}
+.left-bg {
+	background: url("../img/left-bg.png") !important;
+}
+.img.img-bg {
+	position: absolute;
+	background: url("../img/bg2.png") !important;
+	background-size: 100vw 100vh !important;
+	width: 100vw;
+	height: 100vh;
+}
+.img.img-xiaohui {
+	width: 18vw;
+	height: 3.5vw;
+}
+
+
+.left-people {
+	width: 8vw;
+	height: 12vh;
+}
+.img.img-people {
+	position: absolute;
+	width: 8vw;
+	height: 12vh;
+}
+.people-container {
+	position: absolute;
+	height: 100%;
+	width: 100vw;
+	overflow: hidden;
+}
+.people-container.boy {
+	top: 3vh;
+}
+.people-container.girl {
+	top: 18vh;
+}
+.img.img-people.boy {
+	top: -3vh;
+}
+.img.img-people.girl {
+	top: -6vh;
+}
+.img.img-shuyuan {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.left-card {
+	margin: 20px 20px;
+}
+
+/*START::right-top*/
+	.right-top {
+		height: 60vh;
+		/*position: absolute;*/
+	}
+	#ditu_chart {
+		float: left;
+		position: absolute;
+		left: -21vw;
+		top: -4vh;
+	}
+	.major-wrap {
+		float: right;
+		position: absolute;
+		right: 2vw;
+		top: 5vh;
+		width: 30vw;
+		height: 55vh;
+	}
+	.major-wrap .chart-wrap {
+		padding-left: 3vw;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+		padding-right: 3vw;
+		width: 100%;
+		height: 100%;
+	}
+/*END::right-top*/
+
+/*START::right-bottom*/
+	.right-bottom {
+		float: left;
+		width: 100%;
+		bottom: 0px;
+		position: absolute;
+	}
+	.table th,
+	.table td {
+		padding: 0.5rem;
+	}
+	.table.table-vertical {
+		background: -webkit-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); 
+		background: -o-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); 
+		background: -moz-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); 
+		background: linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); 
+		margin-bottom: 0;
+	}
+	.table.table-vertical th,
+	.table.table-vertical td {
+		border:0;
+	}
+	.table.table-vertical th {
+		border: 1px solid #dee2e6;
+	}
+	.table.table-vertical td {
+		border-left: 1px solid #dee2e6;
+		border-right: 1px solid #dee2e6;
+		border-top: 0;
+		border-bottom: 0;
+	}
+	.table-wrap {
+	    content: '';
+		-webkit-mask-image: -webkit-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
+		-webkit-mask-image: -o-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
+		-webkit-mask-image: -moz-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
+		-webkit-mask-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
+	    width: 100%;
+	    height: 100%;
+	}
+/*END::right-bottom*/

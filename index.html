@@ -4,138 +4,25 @@
 	<meta charset="UTF-8">
 	<title>北京理工大学数字迎新</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<style>
-		* {
-			color: white;
-			margin: 0;
-			padding: 0;
-		}
-		div {
-			overflow: hidden;
-			background: rgba(255,255,255,0);
-		}
-		body {
-			width: 100vw;
-			height: 100vh;
-			overflow: hidden;
-			background: url("img/bg.png") no-repeat;
-			background-size: 100vw 100vh;
-		}
-		.position-absolute {
-			position: absolute;
-		}
-		.p-3 {
-			padding: 3vw;
-		}
-		.left-people {
-			width: 8vw;
-			height: 12vh;
-		}
-		.left-bg {
-			background: url("img/left-bg.png") !important;
-		}
-		.img.img-bg {
-			position: absolute;
-			background: url("img/bg2.png") !important;
-			background-size: 100vw 100vh !important;
-			width: 100vw;
-			height: 100vh;
-		}
-		.img.img-xiaohui {
-			width: 18vw;
-			height: 3.5vw;
-		}
-		.img.img-people {
-			position: absolute;
-			width: 8vw;
-			height: 12vh;
-		}
-		.people-container.boy {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			top: 3vw;
-			overflow: hidden;
-		}
-		.img.img-people.boy {
-			top: -3vw;
-		}
-		.img.img-people.girl {
-			
-		}
-		.img.img-shuyuan {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
-		.left-card {
-			/*border: 1px solid #ccc;*/
-			margin: 20px 20px;
-		}
-		.school-wrap {
-			width: 30vw;
-			height: 25vw;
-		}
-		.school-wrap .chart-wrap {
-			padding-left: 70px;
-			padding-top: 50px;
-			padding-bottom: 20px;
-
-			width: 100%;
-			height: 100%;
-		}
-		.table.table-vertical {
-			/*background-color: rgb(62,27,241);*/
-			background: -webkit-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); /* Safari 5.1 - 6.0 */
-			background: -o-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); /* Opera 11.1 - 12.0 */
-			background: -moz-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); /* Firefox 3.6 - 15 */
-			background: linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); /* 标准的语法 */
-			margin-bottom: 0;
-		},
-		,.table.table-vertical th,
-		.table.table-vertical td {
-			border:0;
-		}
-		.table.table-vertical th {
-			border: 1px solid #dee2e6;
-		}
-		.table.table-vertical td {
-			border-left: 1px solid #dee2e6;
-			border-right: 1px solid #dee2e6;
-			border-top: 0;
-			border-bottom: 0;
-		}
-		.table-wrap {
-            content: '';
-			-webkit-mask-image: -webkit-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
-			-webkit-mask-image: -o-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
-			-webkit-mask-image: -moz-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
-			-webkit-mask-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.5), rgba(255,255,255,0)); 
-            width: 100%;
-            height: 100%;
-            /*color: #fff;*/
-		}
-	</style>
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<div class="img img-bg"></div>
 	<div class="container-fluid p-3 position-absolute">
 		<div class="row">
 			<!-- START::LEFT -->
-			<div class="col-4">
+			<div class="col-3">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-12">
 						<img src="img/xiaohui.png" class="img img-xiaohui" alt="xiaohui">
-					</div>
-					<div class="col-4">
-						<h1>2018</h1>
+						<h1 class="h2018">2018</h1>
 					</div>
 				</div>
 				<div class="row left-card left-bg">
 					<div class="col-8">
 						<div id="register_num_chart" style="width:100%;height: 25vh;"></div>
 					</div>
-					<div class="col-4">
+					<div class="col-4" style="left: -2vw;">
 						<div class="left-people boy">
 							<img src="img/boy0.png" class="img img-people" alt="">
 							<div class="people-container boy">
@@ -159,27 +46,21 @@
 			</div>
 			<!-- END::LEFT -->
 			<!-- START::RIGHT -->
-			<div class="col-8">
-				<div class="row">
+			<div class="col-9">
+				<div class="row right-top">
 					<div class="col-12">
 						<h1 style="float: left;">新生报到大<br>数据</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-6">
-						<div id="ditu_chart" style="width:100%;height: 50vh;"></div>
-					</div>
-					<div class="col-6">
-						<div class="school-wrap">							
+						<div id="ditu_chart" style="width:80vw;height:70vh;"></div>
+						<div class="major-wrap">							
 							<img src="img/kuang.png" class="img img-shuyuan" alt="">
 							<div class="chart-wrap">
-								<div id="school_chart" class="left-bg" style="width:100%;height: 100%;"></div>
+								<div id="major_chart" class="left-bg" style="width:100%;height: 100%;"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-6">
+				<div class="row right-bottom">
+					<div class="col-4">
 						<h3 class="text-center">最新报到同学</h3>
 						<div class="table-wrap">
 							<table class="table table-vertical">
@@ -220,7 +101,7 @@
 							</table>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-4">
 						<h3 class="text-center">省份报到率排行榜</h3>
 						<div class="table-wrap">
 							<table class="table table-vertical">
@@ -254,155 +135,15 @@
 								</tbody>
 							</table>
 						</div>
-
+					</div>
+					<div class="col-4">
+						<div id="school_chart" style="width: 100%;height: 100%;"></div>
 					</div>
 				</div>
 			</div>
 			<!-- END::RIGHT -->
 		</div>
-
-
-
-
-<!-- 	  <div class="row">
-	  	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-	  		<h1 class="text-center ">2018级新生报到大数据</h1>
-	  	</div>
-	  </div>
-	  <div class="row">
-	  	<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-	  		<div class="row">
-	  			<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-	  				<div class="row">
-
-	  				</div>
-	  				<div class="row">
-	  					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-	  						<h3 class="text-center">报到时间统计</h3>
-	  						<div class="card">
-	  							<div class="card-body">
-	  							</div>
-	  						</div>	  						
-	  					</div>
-
-	  				</div>
-	  			</div>
-
-	  			<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-	  				<h3 class="text-center">本科生招生及报到情况统计</h3>
-					<div class="card">
-						<div class="card-body">
-							<div id="ditu_chart" style="width:100%;height: 50vh;"></div>
-						</div>
-					</div>
-	  			</div>
-	  		</div>
-  			<div class="row">
-  				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-					<table class="table table-striped">
-					  <thead>
-					    <tr>
-					      <th scope="col">最新报到</th>
-					      <th scope="col">姓名</th>
-					      <th scope="col">报到时间</th>
-					      <th scope="col">省份</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <th scope="row">1</th>
-					      <td>Mark</td>
-					      <td>20180808</td>
-					      <td>河南</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">2</th>
-					      <td>Mark</td>
-					      <td>20180808</td>
-					      <td>河南</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">3</th>
-					      <td>Mark</td>
-					      <td>20180808</td>
-					      <td>河南</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">4</th>
-					      <td>Mark</td>
-					      <td>20180808</td>
-					      <td>河南</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">5</th>
-					      <td>Mark</td>
-					      <td>20180808</td>
-					      <td>河南</td>
-					    </tr>
-					  </tbody>
-					</table>
-  				</div>
-  				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-					<table class="table table-striped">
-					  <thead>
-					    <tr>
-					      <th scope="col">报到率排行</th>
-					      <th scope="col">省份</th>
-					      <th scope="col">报到率</th>
-					      <th scope="col">报到人数/应报人数</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <th scope="row">1</th>
-					      <td>河南</td>
-					      <td>57%</td>
-					      <td>114/200</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">2</th>
-					      <td>河北</td>
-					      <td>50%</td>
-					      <td>73/146</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">3</th>
-					      <td>湖北</td>
-					      <td>30%</td>
-					      <td>30/100</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">4</th>
-					      <td>浙江</td>
-					      <td>25%</td>
-					      <td>100/400</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">5</th>
-					      <td>广东</td>
-					      <td>24%</td>
-					      <td>48/200</td>
-					    </tr>
-					  </tbody>
-					</table>
-  				</div>
-  			</div>
-	  	</div>
-	  	<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-	  		<h3 class="text-center">各书院报到统计</h3>
-			<div class="card">
-				<div class="card-body">
-	  				<div id="school_chart" style="width:20vw;height: 80vh;"></div>
-				</div>
-			</div>
-	  	</div>
-	  </div> -->
 	</div>
-
-	<!-- <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script> -->
-
-	<!-- <script src="js/echarts.js"></script> -->
-
 	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
 	<script type="text/javascript" src="js/china.js"></script>
 
@@ -415,14 +156,14 @@
 	<!-- echarts::少数民族统计 -->
 	<script src="js/ethnic.js"></script>
 
+	<!-- echarts::专业，各专业报到统计 -->
+	<script src="js/major.js"></script>
+
 	<!-- echarts::书院，各书院报到统计 -->
 	<script src="js/school.js"></script>
 	
 	<!-- echarts::地图 -->
-	<!-- <script src="js/ditu.js"></script> -->
-
-	<!-- echarts::地图 -->
-	<script src="js/ditu_pm25.js"></script>
+	<script src="js/ditu.js"></script>
 
 </body>
 </html>

@@ -14,7 +14,7 @@ ethnic_option = {
         x : 'right',
         y : 'center',
         orient: 'vertical',
-        data:['汉族','少数民族1','少数民族2','少数民族3','少数民族4',
+        data:['少数民族1','少数民族2','少数民族3','少数民族4',
         '少数民族5','少数民族6','少数民族7']
     },
     toolbox: {
@@ -33,34 +33,10 @@ ethnic_option = {
     calculable : true,
     series : [
         {
-            name: '半径模式',
-            type: 'pie',
-            radius : '60',
-            center: ['30%', '50%'],
-            // roseType: 'radius',
-            data:[
-                {value:3000, name:'汉族'},
-                {value:100, name:'少数民族1', selected: true},
-                {value:80, name:'少数民族2', selected: true},
-                {value:70, name:'少数民族3', selected: true},
-                {value:50, name:'少数民族4', selected: true},
-                {value:40, name:'少数民族5', selected: true},
-                {value:30, name:'少数民族6', selected: true},
-                {value:10, name:'少数民族7', selected: true}
-            ],
-            itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        },
-        {
             name:'面积模式',
             type:'pie',
             radius : '60',
-            center : ['70%', '50%'],
+            // center : ['70%', '50%'],
             // roseType : 'area',
             data:[
                 {value:100, name:'少数民族1'},
