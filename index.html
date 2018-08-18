@@ -6,141 +6,187 @@
 	<title>北京理工大学数字迎新</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-fixed.css" rel="stylesheet">
 </head>
 
 <body>
+	<!-- background picture -->
 	<div class="img img-bg"></div>
+
 	<div class="container-fluid p-3 position-absolute">
 		<div class="row">
 			<!-- START::LEFT -->
 			<div class="col-3">
+				<!-- START::(0,0) -->
 				<div class="row">
-					<div class="col-12">
+					<div class="col-12" id="div-00">
 						<img src="img/xiaohui.png" class="img img-xiaohui" alt="xiaohui">
-						<h1 class="h2018">2018</h1>
 					</div>
 				</div>
-				<div class="row left-card left-bg">
-					<div class="col-8">
-						<div id="register_num_chart" style="width:100%;height: 25vh;"></div>
-					</div>
-					<div class="col-4" style="left: -2vw;">
-						<div class="left-people boy">
-							<img src="img/boy0.png" class="img img-people" alt="">
-							<div class="people-container boy">
-								<img src="img/boy1.png" class="img img-people boy" alt="">
+				<!-- END::(0,0) -->
+				<!-- START::(1,0) -->
+				<div class="row" id="div-10">
+					<div class="col-12 left-bg left-card">
+						<div class="col-8" style="float:left;">
+							<div>
+								<div id="register_num_chart"></div>
 							</div>
 						</div>
-						<div class="left-people girl">
-							<img src="img/girl0.png" class="img img-people" alt="">
-							<div class="people-container girl">
-								<img src="img/girl1.png" class="img img-people girl" alt="">
+						<div class="col-4" style="float:left;left: -2vw;">
+							<div class="left-people boy">
+								<img src="img/boy0.png" class="img img-people" alt="">
+								<div class="people-container boy">
+									<img src="img/boy1.png" class="img img-people boy" alt="">
+								</div>
+							</div>
+							<div class="left-people girl">
+								<img src="img/girl0.png" class="img img-people" alt="">
+								<div class="people-container girl">
+									<img src="img/girl1.png" class="img img-people girl" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row left-card left-bg">
-					<div id="register_time_chart" style="width: 100%;height: 30vh;"></div>
+				<!-- END::(1,0) -->
+				<!-- START::(2,0) -->
+				<div class="row" id="div-20">
+					<div class=" left-card left-bg col-12">
+						<div id="register_time_chart" style="width: 100%;height: 30vh;"></div>
+					</div>
 				</div>
-				<div class="row left-card left-bg">
-					<div id="ethnic_chart" style="width: 100%;height: 25vh;"></div>
+				<!-- END::(2,0) -->
+				<!-- START::(3,0) -->
+				<div class="row" id="div-30">
+					<div class="col-12 left-card left-bg">
+						<div id="ethnic_chart" style="width: 100%;height: 25vh;"></div>
+					</div>
 				</div>
+				<!-- END::(3,0) -->
+
 			</div>
 			<!-- END::LEFT -->
 			<!-- START::RIGHT -->
 			<div class="col-9">
-				<div class="row right-top">
+				<!-- START::(0,1) -->
+				<div class="row" id="div-01">
 					<div class="col-12">
-						<h1 style="float: left;">新生报到大<br>数据</h1>
-						<div id="ditu_chart" style="width:80vw;height:70vh;"></div>
-						<div class="major-wrap">							
-							<img src="img/kuang.png" class="img img-shuyuan" alt="">
+						<h1>2018新生报到大数据</h1>
+					</div>
+				</div>
+				<!-- END::(0,1) -->
+				<div class="row">
+					<!-- START::(1,1) -->
+					<div class="col-8" id="div-11">
+						<div id="ditu_chart"></div>
+					</div>
+					<!-- END::(1,1) -->
+					<!-- START::(1,2) -->
+					<div class="col-4" id="div-12">
+						<div class="major-wrap">
+							<!-- <img src="img/kuang.png" class="img img-shuyuan" alt=""> -->
 							<div class="chart-wrap">
 								<div id="major_chart" class="left-bg" style="width:100%;height: 100%;"></div>
 							</div>
 						</div>
 					</div>
+					<!-- START::(1,2) -->
 				</div>
+
 				<div class="row right-bottom">
-					<div class="col-4">
-						<h3 class="text-center">最新报到同学</h3>
-						<div class="table-wrap">
-							<table class="table table-vertical">
-								<thead>
-									<tr>
-										<th>姓名</th>
-										<th>省份</th>
-										<th>报到时间</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>xxx</td>
-										<td>xxx</td>
-										<td>xx:xx</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xxx</td>
-										<td>xx:xx</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xxx</td>
-										<td>xx:xx</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xxx</td>
-										<td>xx:xx</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xxx</td>
-										<td>xx:xx</td>
-									</tr>
-								</tbody>
-							</table>
+					<!-- START::(3,1) -->
+					<div class="col-4" id="div-31">
+						<div class="left-bg">
+							<h3 class="text-center">最新报到同学</h3>
+							<div class="table-wrap">
+								<table class="table table-vertical">
+									<thead>
+										<tr>
+											<th>姓名</th>
+											<th>省份</th>
+											<th>报到时间</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>xxx</td>
+											<td>xxx</td>
+											<td>xx:xx</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xxx</td>
+											<td>xx:xx</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xxx</td>
+											<td>xx:xx</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xxx</td>
+											<td>xx:xx</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xxx</td>
+											<td>xx:xx</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
-					<div class="col-4">
-						<h3 class="text-center">省份报到率排行榜</h3>
-						<div class="table-wrap">
-							<table class="table table-vertical">
-								<thead>
-									<tr>
-										<th>省份</th>
-										<th>报到率</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>xxx</td>
-										<td>xx.xx%</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xx.xx%</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xx.xx%</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xx.xx%</td>
-									</tr>
-									<tr>
-										<td>xxx</td>
-										<td>xx.xx%</td>
-									</tr>
-								</tbody>
-							</table>
+					<!-- END::(3,1) -->
+					<!-- START::(3,2) -->
+
+					<div class="col-4" id="div-32">
+						<div class="left-bg">
+							<h3 class="text-center">省份报到率排行榜</h3>
+							<div class="table-wrap">
+								<table class="table table-vertical">
+									<thead>
+										<tr>
+											<th>省份</th>
+											<th>报到率</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>xxx</td>
+											<td>xx.xx%</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xx.xx%</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xx.xx%</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xx.xx%</td>
+										</tr>
+										<tr>
+											<td>xxx</td>
+											<td>xx.xx%</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
-					<div class="col-4">
-						<div id="school_chart" style="width: 100%;height: 100%;"></div>
+					<!-- END::(3,2) -->
+					<!-- START::(3,3)-->
+					<div class="col-4" id="div-33">
+						<div class="left-bg max-width">
+							<div id="school_chart" style="width: 100%;height: 100%;"></div>
+						</div>
 					</div>
+					<!-- END::(3,3)-->
+
 				</div>
 			</div>
 			<!-- END::RIGHT -->
