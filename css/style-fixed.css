@@ -5,6 +5,8 @@
 }
 
 #div-00 ,#div-01{
+    margin-left:2vw;
+    margin-top:2vh;
     height:8vh;
 }
 
@@ -14,18 +16,21 @@
 
 #div-11{
     height:60vh;
+    padding:0;
 }
 #div-12{
     height:60vh;
+    float: left;
+    padding:0;
 }
 
 #ditu_chart {
     float: left;
     position: absolute;
-    /* left: -11vw; */
-    /* top: -4vh; */
-    width:30vw;
-    height:30vh;
+     left: -7vw;
+    top: -2vh;
+    width:60vw;
+    height:60vh;
 }
 
 
@@ -36,7 +41,13 @@
 
 #div-31,#div-32,#div-33{
     height: 30vh;
+    padding:0;
 }
 .max-width{
     height:100%;
+}
+
+.row{
+    margin-right: 0px;
+    /* margin-left:0px; */
 }

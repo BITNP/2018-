@@ -13,9 +13,10 @@
 	<!-- background picture -->
 	<div class="img img-bg"></div>
 
-	<div class="container-fluid p-3 position-absolute">
+	<div class="people-container">
 		<div class="row">
 			<!-- START::LEFT -->
+
 			<div class="col-3">
 				<!-- START::(0,0) -->
 				<div class="row">
@@ -25,7 +26,7 @@
 				</div>
 				<!-- END::(0,0) -->
 				<!-- START::(1,0) -->
-				<div class="row" id="div-10">
+				<div class="row col-12" id="div-10">
 					<div class="col-12 left-bg left-card">
 						<div class="col-8" style="float:left;">
 							<div>
@@ -50,14 +51,14 @@
 				</div>
 				<!-- END::(1,0) -->
 				<!-- START::(2,0) -->
-				<div class="row" id="div-20">
+				<div class="row col-12" id="div-20">
 					<div class=" left-card left-bg col-12">
 						<div id="register_time_chart" style="width: 100%;height: 30vh;"></div>
 					</div>
 				</div>
 				<!-- END::(2,0) -->
 				<!-- START::(3,0) -->
-				<div class="row" id="div-30">
+				<div class="row col-12" id="div-30">
 					<div class="col-12 left-card left-bg">
 						<div id="ethnic_chart" style="width: 100%;height: 25vh;"></div>
 					</div>
@@ -78,25 +79,30 @@
 				<div class="row">
 					<!-- START::(1,1) -->
 					<div class="col-8" id="div-11">
-						<div id="ditu_chart"></div>
+						<div class="left-bg left-card" style="height:56vh;">
+							<div id="ditu_chart"></div>
+						</div>
 					</div>
 					<!-- END::(1,1) -->
 					<!-- START::(1,2) -->
 					<div class="col-4" id="div-12">
-						<div class="major-wrap">
-							<!-- <img src="img/kuang.png" class="img img-shuyuan" alt=""> -->
-							<div class="chart-wrap">
-								<div id="major_chart" class="left-bg" style="width:100%;height: 100%;"></div>
+						<div class="left-card left-bg" style="height:56vh;">
+							<div class="major-wrap">
+								<!-- <img src="img/kuang.png" class="img img-shuyuan" alt=""> -->
+								<div class="chart-wrap">
+									<!-- 为啥把这个宽高移到css中，图表就没有了 -->
+									<div id="major_chart" style="width:80%;height:90%;"></div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<!-- START::(1,2) -->
 				</div>
 
-				<div class="row right-bottom">
+				<div class="row">
 					<!-- START::(3,1) -->
 					<div class="col-4" id="div-31">
-						<div class="left-bg">
+						<div class="left-bg left-card">
 							<h3 class="text-center">最新报到同学</h3>
 							<div class="table-wrap">
 								<table class="table table-vertical">
@@ -142,7 +148,7 @@
 					<!-- START::(3,2) -->
 
 					<div class="col-4" id="div-32">
-						<div class="left-bg">
+						<div class="left-bg left-card">
 							<h3 class="text-center">省份报到率排行榜</h3>
 							<div class="table-wrap">
 								<table class="table table-vertical">
@@ -181,8 +187,8 @@
 					<!-- END::(3,2) -->
 					<!-- START::(3,3)-->
 					<div class="col-4" id="div-33">
-						<div class="left-bg max-width">
-							<div id="school_chart" style="width: 100%;height: 100%;"></div>
+						<div class="left-bg left-card">
+							<div id="school_chart" style="width: 100%;height: 110%;"></div>
 						</div>
 					</div>
 					<!-- END::(3,3)-->

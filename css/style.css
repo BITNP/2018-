@@ -5,7 +5,7 @@
 		padding: 0;
 	}
 	div {
-		/*overflow: hidden;*/
+		overflow: hidden;
 		background: rgba(255,255,255,0);
 	}
 	body {
@@ -28,7 +28,7 @@
 	padding: 3vw;
 }
 .left-bg {
-	background: url("../img/left-bg.png") !important;
+	background: url("../img/left-bg2.png") !important;
 }
 .img.img-bg {
 	position: absolute;
@@ -72,29 +72,36 @@
 	height: 100%;
 }
 .left-card {
-	/* margin: 20px 20px; */
+	margin:2vh 1vw 2vh 1vw;
+	padding:2vh 1vw 2vh 1vw;
+	height:26vh;
 }
 
 /*START::right-top*/
 	.right-top {
-		height: 60vh;
+		/* height: 60vh; */
 		/*position: absolute;*/
 	}
 
 	.major-wrap {
-		float: right;
-		position: absolute;
+		/* float: right; */
+		/* position: absolute; */
 		/* right: 2vw; */
 		/* top: 5vh; */
-		width: 20vw;
-		height: 45vh;
+		/* padding-top:2vh 2vw 2vh 2vw; */
+		/* width: 100%; */
+		height: 60vh;
 	}
 	.major-wrap .chart-wrap {
 		/* padding-left: 3vw; */
 		/* padding-top: 3vw; */
 		/* padding-bottom: 3vw; */
 		/* padding-right: 3vw; */
-		width: 80%;
+		width:100%;
+		height: 100%;
+	}
+	.major-chart {
+		width:80%;
 		height: 100%;
 	}
 /*END::right-top*/
@@ -108,7 +115,7 @@
 	}
 	.table th,
 	.table td {
-		padding: 0.5rem;
+		padding: 0.1rem;
 	}
 	/* .table.table-vertical {
 		background: -webkit-linear-gradient(rgba(62,27,241,1), rgba(62,27,241,0.7), rgba(255,255,255,0)); 
