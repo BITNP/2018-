@@ -104,7 +104,7 @@ var major_option = {
             data: [162,179,166,174,156,134,150,161,172,171,165,132,133,168,132,179,170,162,131]
         }
     ],
-    color: ['rgb(0,230,104)', 'rgb(255,192,0)', 'rgb(166,166,166)']
+    color: ['rgb(129,84,100)', 'rgb(123,129,84)', 'rgb(166,166,166)']
 };
 
 var major_charts = echarts.init(document.getElementById('major_chart'));

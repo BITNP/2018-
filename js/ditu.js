@@ -251,8 +251,8 @@ ditu_option = {
         },
         itemStyle: {
             normal: {
-                areaColor: '#ff649a',
-                borderColor: '#111'
+                areaColor: '#AE5656',
+                borderColor: '#fff'
             },
             emphasis: {
                 areaColor: '#fff'

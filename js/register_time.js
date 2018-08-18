@@ -86,10 +86,7 @@ let register_time_option = {
             itemStyle: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
-                        color: 'rgba(255,192,0,1)'
-                    }, {
-                        offset: 1,
-                        color: 'rgba(255,192,0,0)'
+                        color: 'rgba(130,113,84,1)'
                     }]),
                 borderWidth: 1,
                 borderColor: '#fff'
