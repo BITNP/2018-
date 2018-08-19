@@ -17,6 +17,9 @@
 	}
 /*END::全局*/
 
+.font-bold {
+	font-weight: bold;
+}
 
 .h2018 {
 	float: right;
@@ -47,25 +50,34 @@
 	width: 8vw;
 	height: 12vh;
 }
+.left-people .percent {
+	position: absolute;
+	left: 50%;
+	bottom: 3%;
+}
+.left-people .percent.boy {
+	bottom: 52%;
+}
+
 .img.img-people {
 	position: absolute;
-	width: 8vw;
+	width: 100%;
 	height: 12vh;
 }
 .people-container {
 	position: absolute;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	overflow: hidden;
 }
 .people-container.boy {
-	top: 3vh;
+	top: 6vh;
 }
 .people-container.girl {
 	top: 18vh;
 }
 .img.img-people.boy {
-	top: -3vh;
+	top: -6vh;
 }
 .img.img-people.girl {
 	top: -6vh;
@@ -75,6 +87,12 @@
 	width: 100%;
 	height: 100%;
 }
+.percent {
+	position: absolute;
+	bottom: 20%;
+	left: 40%;
+}
+
 .left-card {
 	margin: 20px 20px;
 }
@@ -94,9 +112,8 @@
 		float: right;
 		position: absolute;
 		right: 2vw;
-		top: 5vh;
 		width: 30vw;
-		height: 55vh;
+		height: 63vh;
 	}
 	.major-wrap .chart-wrap {
 		padding-left: 3vw;

@@ -1,3 +1,33 @@
+
+let total_num = [624,1091,76,262,121,153,738,564,286];
+
+function getDataFromServerSchool() {
+  return [ 93, 700, 57, 30, 22, 89, 290, 160, 70 ];
+// $.get('http://yingxin.info.bit.edu.cn/studentData/halfHourHadRegister',function(res) {
+//   console.log(res)
+// })
+}
+
+function dataFactorySchool(ret_data) {
+
+    let output = {
+        ok: [],
+        no: []
+    };
+
+    output.ok = ret_data;
+
+    let len = output.ok.length
+    for(let i = 0; i < len; i++) {
+        output.no[i] = total_num[i] - output.ok[i];
+    }
+
+    return output;
+
+}
+
+let school_datas = dataFactorySchool(getDataFromServerSchool());
+
 var this_barWidth = 30;
 
 var school_option = {
@@ -13,10 +43,9 @@ var school_option = {
     },
     title:{
         text: '书院报到情况',
-        x: 'center',
+        x: 'left',
         textStyle: {
-            color: 'white',
-            fontSize: '25'
+            color: 'white'
         }
     },
     toolbox: {
@@ -31,8 +60,7 @@ var school_option = {
     xAxis: [
         {
             type: 'category',
-            data: ["xx书院","xx书院","xx书院","xx书院","xx书院",
-                "xx书院","xx书院","xx书院","xx书院"],
+            data: ["特立书院","睿信书院","民族书院","经管书院","知艺书院","北京书院","精工书院","求是书院","明德书院"],
             axisPointer: {
                 type: 'shadow'
             },
@@ -47,7 +75,6 @@ var school_option = {
                 interval: 0,
                 color: 'white',
                 rotate: 45,
-                fontSize: '15',
                 fontWeight: 'bold'
             }
         }
@@ -64,13 +91,12 @@ var school_option = {
             },
             axisTick: true,
             min: 0,
-            max: 800,
+            max: 1100,
             interval: 100,
             axisLabel: {
                 show: true,
                 formatter: '{value}',
                 color: 'white',
-                fontSize: '15',
                 fontWeight: 'bold'
             },
             splitLine: {
@@ -84,9 +110,14 @@ var school_option = {
     ],
     series: [
         {
-            name:'当前报名人数柱状图',
+            name:'已报到人数',
             type:'bar',
             stack: 'aa',
+            label: {
+                normal: {
+                    show: true
+                }
+            },
             itemStyle: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
@@ -98,18 +129,23 @@ var school_option = {
                 borderWidth: 1,
                 borderColor: '#fff'
             },
-            data:[108,405,107,496,223,118,144,512,168]
+            data: school_datas.ok
         },
         {
-            name:'当前报状图',
+            name:'未报到人数',
             type:'bar',
             stack: 'aa',
+            label: {
+                normal: {
+                    show: true
+                }
+            },
             itemStyle: {
                 color: '#ccc',
                 borderWidth: 1,
                 borderColor: '#fff'
             },
-            data:[202,122,367,116,553,358,506,284,435]
+            data: school_datas.no
         }
     ]
 };

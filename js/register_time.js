@@ -1,4 +1,35 @@
 
+
+function getDataFromServerRegisterTime() {
+  return {"1":34,"2":98,"3":23,"4":19,"5":36,"6":23,"7":28,"8":56,"9":89,"10":59,"11":75,"12":54,"13":2,"14":44,"15":5,"16":56,"17":60,"18":49};
+// $.get('http://yingxin.info.bit.edu.cn/studentData/halfHourHadRegister',function(res) {
+//   console.log(res)
+// })
+}
+
+function dataFactoryRegisterTime(ret_data) {
+
+    let output = {
+        xdata: [],
+        data: []
+    };
+    let index = 1;
+
+    while(ret_data[index] != undefined) {
+        output.data.push(ret_data[index])
+        index++;
+    }
+
+    for(var i = 0; i < index - 1; i++) {
+        output.xdata.push((6 + parseInt(i/2)) + ':' + ((i%2) ? "30" : "00"))
+    }
+
+    return output;
+
+}
+
+let datas = dataFactoryRegisterTime(getDataFromServerRegisterTime());
+
 let register_time_option = {
     tooltip: {
         show:false,
@@ -12,24 +43,24 @@ let register_time_option = {
     },
     title:{
         text: '报名时间分布',
-        x: 'center',
+        x: 'left',
         textStyle: {
-            color: 'white',
-            fontSize: '25'
+            color: 'white'
         }
     },
     toolbox: {
+        show: false,
         feature: {
             dataView: {show: true, readOnly: false},
             magicType: {show: true, type: ['line', 'bar']},
             restore: {show: true},
-            saveAsImage: {show: true}
+            saveAsImage: {show: true}       
         }
     },
     xAxis: [
         {
             type: 'category',
-            data: ['9:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'],
+            data: datas.xdata,
             axisPointer: {
                 type: 'shadow'
             },
@@ -43,8 +74,7 @@ let register_time_option = {
                 show: true,
                 interval: 0,
                 color: 'white',
-                rotate: 45,
-                fontSize: '15',
+                rotate: 60,
                 fontWeight: 'bold'
             }
         }
@@ -61,13 +91,12 @@ let register_time_option = {
             },
             axisTick: true,
             min: 0,
-            max: 2500,
-            interval: 500,
+            max: 100,
+            interval: 20,
             axisLabel: {
                 show: true,
                 formatter: '{value}',
                 color: 'white',
-                fontSize: '15',
                 fontWeight: 'bold'
             },
             splitLine: {
@@ -94,7 +123,7 @@ let register_time_option = {
                 borderWidth: 1,
                 borderColor: '#fff'
             },
-            data:[50, 100, 390, 430, 460, 600, 900, 1100, 1600, 2000]
+            data: datas.data
         },
         {
             name:'当前报名人数折线图',
@@ -106,7 +135,7 @@ let register_time_option = {
                 color: 'white',
                 width: 1
             },
-            data:[50, 100, 390, 430, 460, 600, 900, 1100, 1600, 2000]
+            data: datas.data
         }
     ]
 };
