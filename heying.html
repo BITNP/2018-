@@ -32,9 +32,9 @@
 			<div class="num">X</div>
 		</div>
 		<div class="hometown">
-			<div class="font">湖</div>
-			<div class="font">北</div>
-			<div class="font">省</div>
+			<div class="num">湖</div>
+			<div class="num">北</div>
+			<div class="num">省</div>
 		</div>
 		<div class="nums order">
 			<div class="num">X</div>
@@ -43,12 +43,12 @@
 			<div class="num">X</div>
 		</div>
 		<div class="codes">
-			<div class="code">1</div>
-			<div class="code">0</div>
-			<div class="code">0</div>
-			<div class="code">0</div>
-			<div class="code">8</div>
-			<div class="code">1</div>
+			<div class="num">1</div>
+			<div class="num">0</div>
+			<div class="num">0</div>
+			<div class="num">0</div>
+			<div class="num">8</div>
+			<div class="num">1</div>
 		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -71,7 +71,7 @@
 			let arr_hometown = student.hometown.split('');
 			let hometown_content = [];
 			for (var i = 0; i < arr_hometown.length; i++) {
-				hometown_content.push('<div class="font">'+arr_hometown[i]+'</div>');
+				hometown_content.push('<div class="num">'+arr_hometown[i]+'</div>');
 			}
 			$('.hometown').html(hometown_content.join(''));
 			let arr_order = student.order.split('');

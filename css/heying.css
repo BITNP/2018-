@@ -4,8 +4,8 @@
 }
 .position-absolute {
 	position: absolute;
-	left: 36px;
-	top: 100px;
+	left: 0;
+	top: 0;
 	width: 1024px;
 	height: 768px;
 }
@@ -55,28 +55,28 @@ img.tome {
 	left: 31%;
 	bottom: 11%;
 	text-align: center;
-	line-height: 1.6vw;
+	line-height: 3vw;
 	font-weight: bold;
 	font-size: 1.8rem;
 }
-.codes .code {
+.codes .num {
 	display: inline-block;
-	width: 1.6vw;
-	height: 1.6vw;
+	width: 3vw;
+	height: 3vw;
 	background-color: #B16637;
 	color: #fff;
-}
+} 
 .nums {
 	position: absolute;
 	text-align: center;
-	line-height: 2vw;
+	line-height: 3.3vw;
 	font-weight: bold;
 	font-size: 2rem;
 }
 .nums .num {
 	display: inline-block;
-	width: 2vw;
-	height: 2vw;
+	width: 3.3vw;
+	height: 3.3vw;
 	margin-right: 0.5vw;
 	background-color: #3AAD6C;
 	color: #fff;
@@ -90,7 +90,7 @@ img.tome {
 	left: 16%;
 	top: 20%;
 	text-align: center;
-	line-height: 2vw;
+	line-height: 3vw;
 	font-weight: bold;
 	font-size: 2rem;
 }
@@ -98,10 +98,10 @@ img.tome {
 	left: 16%;
 	top: 30%;
 }
-.hometown .font {
+.hometown .num {
 	display: inline-block;
-	width: 2vw;
-	height: 2vw;
+	width: 3.3vw;
+	height: 3.3vw;
 	margin-right: 0.5vw;
 	background-color: #B16637;
 	color: #fff;
