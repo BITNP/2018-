@@ -30,7 +30,8 @@ var register_num_option = {
       text:'总招新人数: 3915',
       x: 'left',
       textStyle: {
-          color: 'white'
+          color: 'white',
+            fontFamliy: 'Zzgflscgt'
       }
     },
     legend: {
@@ -50,12 +51,14 @@ var register_num_option = {
                     show: true,
                     position: 'inside',
                     textStyle: {
+                      fontFamliy: 'Zzgflscgt'
                     }
                 },
                 emphasis: {
                     show: true,
                     textStyle: {
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        fontFamliy: 'Zzgflscgt'
                     }
                 }
             },
@@ -65,6 +68,7 @@ var register_num_option = {
                       show: true,
                       formatter: '{b}\n{c}',
                       color: '#fff',
+                      fontFamliy: 'Zzgflscgt',
                       fontWeight: 'bold'
                   }
               }

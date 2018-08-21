@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>合影</title>
+	<link rel="stylesheet" href="css/heying.css">
+</head>
+<body>
+	<div class="position-absolute">
+		<img src="img/bg-hy.png" class="bg hy1" alt="">
+		<img src="img/bg-hy2.png" class="bg hy2" alt="">
+		<img src="img/bg-hy3.png" class="bg hy3" alt="">
+		<img src="img/bg-hy4.png" class="bg hy4" alt="">
+		<img src="img/bg-hy-xian.png" class="line" alt="">
+		<img src="img/xiaohui.png" class="xiaohui" alt="">
+		<img src="img/hat.png" class="hat" alt="">
+		<img src="img/tome.png" class="tome" alt="">
+		<h4 class="font-tome">TO ME</h4>
+		<h4 class="font-xueqi">第一学期</h4>
+		<h4 class="font-zhuce">已注册</h4>
+		<div class="fonts">
+			<div class="font one">我是</div>
+			<div class="font two">来自</div>
+			<div class="font three">是第</div>
+			<div class="font four">位来报道的同学</div>
+			<div class="font tome">祝福</div>
+		</div>
+
+		<div class="nums name">
+			<div class="num">X</div>
+			<div class="num">X</div>
+			<div class="num">X</div>
+		</div>
+		<div class="hometown">
+			<div class="font">湖</div>
+			<div class="font">北</div>
+			<div class="font">省</div>
+		</div>
+		<div class="nums order">
+			<div class="num">X</div>
+			<div class="num">X</div>
+			<div class="num">X</div>
+			<div class="num">X</div>
+		</div>
+		<div class="codes">
+			<div class="code">1</div>
+			<div class="code">0</div>
+			<div class="code">0</div>
+			<div class="code">0</div>
+			<div class="code">8</div>
+			<div class="code">1</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		let ret_student_data = {
+			name: "张三",
+			hometown: '北京市',
+			order: '1253',
+			wishes: '祝福的话祝福的话祝福的话祝福的话祝福的话祝福的话'
+		}
+		function loadStudent(student) {
+			let arr_name = student.name.split('');
+			let name_content = [];
+			for (var i = 0; i < arr_name.length; i++) {
+				name_content.push('<div class="num">'+arr_name[i]+'</div>');
+			}
+			$('.nums.name').html(name_content.join(''));
+
+
+			let arr_hometown = student.hometown.split('');
+			let hometown_content = [];
+			for (var i = 0; i < arr_hometown.length; i++) {
+				hometown_content.push('<div class="font">'+arr_hometown[i]+'</div>');
+			}
+			$('.hometown').html(hometown_content.join(''));
+			let arr_order = student.order.split('');
+			let order_content = [];
+			for (var i = 0; i < arr_order.length; i++) {
+				order_content.push('<div class="num">'+arr_order[i]+'</div>');
+			}
+			$('.nums.order').html(order_content.join(''));
+
+			$('.fonts .font.tome').text(student.wishes);
+		}
+		loadStudent(ret_student_data)
+	</script>
+</body>
+</html>

@@ -1,4 +1,11 @@
 /*START::全局*/
+	@font-face {
+
+		font-family: 'Zzgflscgt'; /*字体名称*/
+
+		src: url('../zzgflscgt.ttf'); /*字体源文件*/
+
+	}
 	* {
 		color: white;
 		margin: 0;

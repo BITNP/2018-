@@ -251,7 +251,8 @@ ditu_option = {
         show: false,
         x:'left',
         textStyle: {
-            color: '#fff'
+            color: '#fff',
+            fontFamliy: 'Zzgflscgt'
         }
     },
     tooltip: {
